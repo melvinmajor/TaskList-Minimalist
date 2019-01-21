@@ -1,0 +1,37 @@
+package todolist;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import commands.AddCommand;
+import commands.Command;
+
+public class Main {
+	private List<Command> commands = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		boolean exit = false;
+		while (!exit) { // !exit -> exit == false
+			System.out.print("Enter a command> ");
+			
+			if (scanner.hasNextLine()) {
+				String inputCommand = scanner.nextLine();
+				
+				if (inputCommand.equals("exit")) {
+					exit = true;
+				} else {
+					getCommand(inputCommand).execute();
+				}
+				
+			}
+		}
+		
+		scanner.close(); // otherwise, memory leak
+	}
+
+	private static Command getCommand(String inputCommand) {
+		return new AddCommand();
+	}
+}

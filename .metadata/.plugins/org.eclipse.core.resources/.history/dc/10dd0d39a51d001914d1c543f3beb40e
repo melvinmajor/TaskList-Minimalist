@@ -1,0 +1,22 @@
+package commands;
+
+import todolist.Main;
+import todolist.Task;
+
+public class DeleteCommand implements Command {
+
+	@Override
+	public String description() {
+		return "delete";
+	}
+
+	@Override
+	public void execute() {
+		for(Task task : Main.tasks) {
+			System.out.println("ID: " + task.getId() + " - Description: " + task.getDescription());
+		}
+		System.out.print("ID to delete> ");
+
+	}
+
+}

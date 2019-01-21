@@ -1,0 +1,18 @@
+package commands;
+
+public class AddCommand implements Command {
+
+	@Override
+	public void execute() {
+		System.out.print("Please insert:\nA description>");
+		
+		System.out.println("add");
+
+	}
+
+	@Override
+	public String description() {
+		return "add";
+	}
+
+}

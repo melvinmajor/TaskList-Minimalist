@@ -1,0 +1,9 @@
+package commands;
+
+public class List {
+	@Override
+	public void execute() {
+		System.out.println("list");
+
+	}
+}

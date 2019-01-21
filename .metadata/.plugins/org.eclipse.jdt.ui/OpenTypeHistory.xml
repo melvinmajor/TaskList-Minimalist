@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=TodoList/C:\/Program Files\/Java\/jdk-11.0.1\/lib\/jrt-fs.jar`java.base&lt;java.lang(String.class[String" modifiers="49" timestamp="1541532012574"/>
+    <typeInfo handle="=TodoList/C:\/Program Files\/Java\/jdk-11.0.1\/lib\/jrt-fs.jar`java.base&lt;java.util(ArrayList.class[ArrayList" modifiers="33" timestamp="1541532012574"/>
+    <typeInfo handle="=TodoList/src&lt;commands{Command.java[Command" modifiers="513" timestamp="1548090146111"/>
+    <typeInfo handle="=TodoList/C:\/Program Files\/Java\/jdk-11.0.1\/lib\/jrt-fs.jar`java.base&lt;java.util(ConcurrentModificationException.class[ConcurrentModificationException" modifiers="33" timestamp="1541532012574"/>
+</typeInfoHistroy>

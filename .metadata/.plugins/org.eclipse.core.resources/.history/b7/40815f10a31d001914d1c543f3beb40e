@@ -1,0 +1,32 @@
+package commands;
+
+import java.util.Scanner;
+
+import todolist.Main;
+import todolist.Task;
+
+public class AddCommand implements Command {
+
+	@Override
+	public void execute() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Please insert:\nA description>");
+		if (scanner.hasNextLine()) {
+			String description = scanner.nextLine();
+			if (description.isEmpty()) {
+				System.out.println("Sorry... Please try again ;-)\n");
+			} else {
+				Task task = new Task(description);
+				Main.tasks.add(task);
+			}
+		}
+		System.out.println("Done!");
+
+	}
+
+	@Override
+	public String description() {
+		return "add";
+	}
+
+}

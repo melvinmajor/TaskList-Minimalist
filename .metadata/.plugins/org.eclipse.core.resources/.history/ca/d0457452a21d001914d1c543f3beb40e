@@ -1,0 +1,34 @@
+package commands;
+
+import java.util.Scanner;
+
+public class AddCommand implements Command {
+
+	@Override
+	public void execute() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Please insert:\nA description>");
+		if (scanner.hasNextLine()) {
+			String description = scanner.nextLine();
+
+			if (inputCommand.equals("exit")) {
+				exit = true;
+				System.out.println("Goodbye!");
+			} else {
+				Command command = getCommand(inputCommand);
+				if (command == null) {
+					System.out.println("Sorry, wrong command... Please try again ;-)\n");
+					continue;
+				}
+				command.execute();
+			}
+		System.out.println("add");
+
+	}
+
+	@Override
+	public String description() {
+		return "add";
+	}
+
+}
